@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Bookshelf Apps</title>
+		<link rel="stylesheet" type="text/css" href="./Style/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <body>
+            <main>
+                <header>
+                    <h1 class='Header_App'>Bookshelf Apps</h1>
+                </header>
+				<div class='column-input-book'>
+					<div class='column-title'>
+						<div class="add-title">
+							<span id="dg1_edit-caption"></span>Tambah Buku
+						</div>
+					</div>
+					<div id="ADD_BOOKSHELF">
+						<input id="p-ID" type='hidden'>
+						<table cellpadding="2" width="100%">
+							<tr>
+								<td class="pil" valign="top">
+									<label for="p-JUDUL">Judul Buku:</label>
+								</td>
+								<td>
+									<input id="p-JUDUL" type="text" class="w210">
+								</td>
+							</tr> 
+							<tr>
+								<td class="pil" valign="top">
+									<label for="p-NAMA_PENULIS">Nama Penulis:</label>
+								</td>
+								<td>
+									<input id="p-NAMA_PENULIS" type="text" class="w210">
+								</td>
+							</tr> 
+							<tr>
+								<td class="pil" valign="top">
+									<label for="p-TAHUN_PEMBUATAN">Tahun Pembuatan:</label>
+								</td>
+								<td>
+									<select id="p-TAHUN_PEMBUATAN"></select>
+								</td>
+							</tr>
+							<tr>
+								<td class="pil" valign="top">
+									<label for="p-KETERANGAN">Keterangan:</label>
+								</td>
+								<td>
+									<textarea id="p-KETERANGAN"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td class='pil' valign='top'>
+									<label for='p-COMPLETED_BOOK'>Selesai dibaca</label>
+								</td>
+								<td style="vertical-align: top;">
+									<input type='checkbox' id='p-COMPLETED_BOOK' >
+								</td>
+								<td class="pil" valign="top" style="text-align: right;height: 40px;" > </td>
+								<td style="vertical-align: top;"> </td>
+							</tr>
+							<tr>
+								<td class='column-button' align="center" colspan="2">
+									<a id='bt-save' style="width: 100px;" class="g-button g-button-submit" ><div class="fa fa-save"></div><span> Save</span></a>
+									<span style="margin-left:5px;margin-right:5px;"></span>
+									<a id='bt-cancel' style="width: 100px;" class="g-button g-button-red" ><div class="fa fa-times"></div><span> Cancel</span></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class='search'>
+					<table cellpadding="2" width="100%">
+						<tr>
+							<td class="pil2">
+								<label for="p-SEARCH">Search:</label>
+								<input id="p-SEARCH" type="text" class="w210">
+								<a id='bt-SEARCH' style="width: 100px;" class="g-button g-button-submit" ><div class="fa fa-find"></div><span> Search</span></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class='column-uncompleted-bookshelf'>
+					<div class='column-title'>
+						<div class="add-title">
+							<span id="dg1_edit-caption"></span>Rak buku yang belum selesai dibaca
+						</div>
+					</div>
+					<div id="dg1_list-Book_uncompleted" class="Book_uncompleted">
+					</div>
+				</div>
+				<div class='column-completed-bookshelf'>
+					<div class='column-title'>
+						<div class="add-title">
+							<span id="dg1_edit-caption"></span>Rak buku yang sudah selesai dibaca
+						</div>
+					</div>
+					<div id="dg1_list-Book_completed" class="Book_completed">
+					</div>
+				</div>
+            </main>
+			<script src="./js/script.js"></script>
+        </body>
+    </head>
+</html>
